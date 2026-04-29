@@ -3,7 +3,7 @@
 **Proyecto Académico — Universidad Nacional Rosario Castellanos**  
 Carrera: Ciencias de Datos para Negocios  
 **Autor:** Brandon Uriel Garcia Sanchez  
-**Período:** 2024-2026
+**Período:** 2026-2026
 
 ---
 
