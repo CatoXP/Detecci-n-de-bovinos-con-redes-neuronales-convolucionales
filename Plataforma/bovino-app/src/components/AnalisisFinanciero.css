@@ -1,0 +1,20 @@
+.financiero-section {
+  background-color: var(--color-background);
+}
+
+.financial-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.text-success { color: var(--color-success); }
+.font-medium { font-weight: 500; }
+.font-bold { font-weight: 700; }
+
+@media (max-width: 768px) {
+  .financial-summary {
+    grid-template-columns: 1fr;
+  }
+}

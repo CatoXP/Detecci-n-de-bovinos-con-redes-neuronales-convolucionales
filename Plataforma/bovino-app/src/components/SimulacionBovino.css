@@ -1,0 +1,364 @@
+.simulacion-container {
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #f2f7ec 0%, var(--color-background) 100%);
+  min-height: auto;
+}
+
+.simulacion-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: -0.5px;
+}
+
+.simulacion-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* Imagen del Bovino */
+.bovino-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bovino-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  animation: slideInLeft 0.6s ease-out;
+  max-width: 100%;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.bovino-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.bovino-card:hover .bovino-image {
+  transform: scale(1.05);
+}
+
+.status-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.6s ease-out 0.3s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Panel de Detalles */
+.bovino-panel {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  animation: slideInRight 0.6s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e0e0db;
+}
+
+.panel-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+.toggle-details-btn {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-details-btn:hover {
+  background: var(--color-primary-light);
+  transform: scale(1.1);
+}
+
+/* Grid de Vitales */
+.vitales-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.vital-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f9f9f6;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.vital-item:hover {
+  background: #f2f2ed;
+  transform: translateX(5px);
+}
+
+.vital-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+}
+
+.vital-icon.heart {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+}
+
+.vital-icon.temp {
+  background: linear-gradient(135deg, #ffa726, #ff7043);
+}
+
+.vital-icon.breath {
+  background: linear-gradient(135deg, #42a5f5, #1e88e5);
+}
+
+.vital-info {
+  flex: 1;
+}
+
+.vital-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+  font-weight: 500;
+}
+
+.vital-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin: 0.25rem 0 0 0;
+}
+
+/* Sección de Detalles */
+.details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--color-background);
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.alert-info svg {
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+
+.prediction {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.prediction h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+.prediction-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0.75rem;
+  background: white;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--color-primary);
+}
+
+/* Selector de Bovinos */
+.bovino-selector {
+  padding-top: 1rem;
+  border-top: 2px solid #e0e0db;
+}
+
+.selector-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin: 0 0 1rem 0;
+}
+
+.selector-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.selector-btn {
+  padding: 0.75rem 1rem;
+  background: #f2f2ed;
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-main);
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.selector-btn:hover {
+  border-color: var(--color-primary);
+  background: #f9f9f6;
+}
+
+.selector-btn.active {
+  color: white;
+  border-color: transparent;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .simulacion-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .bovino-panel {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .simulacion-container {
+    padding: 2rem 1rem;
+  }
+
+  .simulacion-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .bovino-panel {
+    padding: 1.5rem;
+  }
+
+  .vitales-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .selector-buttons {
+    flex-direction: column;
+  }
+
+  .selector-btn {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .simulacion-title {
+    font-size: 1.5rem;
+  }
+
+  .panel-title {
+    font-size: 1.25rem;
+  }
+
+  .vital-value {
+    font-size: 1.25rem;
+  }
+
+  .bovino-panel {
+    padding: 1rem;
+  }
+}

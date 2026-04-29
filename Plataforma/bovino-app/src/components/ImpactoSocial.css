@@ -1,0 +1,103 @@
+.impacto-section {
+  background-color: var(--color-surface-hover);
+}
+
+.sustainability-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.sust-card {
+  padding: 2rem;
+}
+
+.sust-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+  margin-bottom: 1.5rem;
+}
+
+.sust-icon.secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.sust-icon.primary {
+  background-color: var(--color-primary-light);
+  color: white;
+}
+
+.sust-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.sust-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.quote-card {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-light) 100%);
+  color: white;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.quote-icon {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  color: rgba(255, 255, 255, 0.1);
+  transform: scale(3);
+}
+
+.quote-text {
+  font-size: 1.75rem;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-author {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-primary-light);
+  margin-bottom: 1.5rem;
+  font-style: normal;
+}
+
+.quote-explanation {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+}
+
+.quote-explanation strong {
+  color: white;
+}
+
+.badge-outline {
+  background-color: transparent;
+  border: 1px solid var(--text-muted);
+  color: var(--text-muted);
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}

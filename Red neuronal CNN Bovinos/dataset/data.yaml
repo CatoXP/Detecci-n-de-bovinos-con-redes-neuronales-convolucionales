@@ -1,0 +1,6 @@
+names:
+- bovino
+nc: 1
+test: C:\Users\Uriel\Documents\Bovinos Red Neuronal\dataset\test\images
+train: C:\Users\Uriel\Documents\Bovinos Red Neuronal\dataset\train\images
+val: C:\Users\Uriel\Documents\Bovinos Red Neuronal\dataset\val\images
